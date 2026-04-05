@@ -109,9 +109,41 @@ pricingCards.forEach(card => {
     });
 });
 
-// Form submission simulation (if any form added later)
-const forms = document.querySelectorAll('form');
-forms.forEach(form => {
+// Lead form submission
+const leadForm = document.getElementById('lead-form');
+const successMessage = document.getElementById('success-message');
+
+if (leadForm && successMessage) {
+    leadForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Get form data (for demo purposes)
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const exchange = document.getElementById('exchange').value;
+        
+        // Simulate API call
+        setTimeout(() => {
+            // Hide form, show success message
+            leadForm.style.display = 'none';
+            successMessage.style.display = 'block';
+            
+            // Log to console (for debugging)
+            console.log('Lead captured:', { name, email, exchange });
+            
+            // Optional: Reset form after a few seconds (if you want to show form again)
+            // setTimeout(() => {
+            //     leadForm.style.display = 'block';
+            //     successMessage.style.display = 'none';
+            //     leadForm.reset();
+            // }, 5000);
+        }, 800);
+    });
+}
+
+// Other forms (if any) fallback
+const otherForms = document.querySelectorAll('form:not(#lead-form)');
+otherForms.forEach(form => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         alert('Thank you! This is a demo. In a real site, this would submit.');

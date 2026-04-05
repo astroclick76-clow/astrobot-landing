@@ -599,6 +599,118 @@ footer {
     color: #888;
 }
 
+/* Form Section */
+.form-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: var(--radius);
+    margin: 0 20px 80px;
+    text-align: center;
+}
+
+.form-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.form-subtitle {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.lead-form {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius);
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: white;
+}
+
+.form-group label i {
+    color: var(--secondary);
+    margin-right: 8px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 15px;
+    border-radius: var(--radius);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--secondary);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-footer {
+    text-align: center;
+}
+
+.form-note {
+    font-size: 0.9rem;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-note i {
+    color: var(--secondary);
+    margin-right: 8px;
+}
+
+.success-message {
+    background: rgba(40, 167, 69, 0.2);
+    border: 2px solid var(--success);
+    border-radius: var(--radius);
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.success-message i {
+    font-size: 3rem;
+    color: var(--success);
+    margin-bottom: 20px;
+}
+
+.success-message h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .hero .container {
